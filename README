@@ -1,0 +1,6 @@
+cd frontend
+npm install
+npm i three @react-three/fiber @react-three/drei
+npm i @react-three/drei
+npm i three @react-three/fiber @react-three/drei @react-three/postprocessing
+npm run dev
