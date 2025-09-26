@@ -4,38 +4,38 @@ import "../styles/dialogScene.css";
 const LINES = [
   {
     id: "S1",
-    name: "직원 1",
+    name: "Agent 1",
     side: "right",
     avatar: "/agent.png",
-    text: "자네가 Cat Joe지? 밤마다 도서관 폐지 더미에서 우주 사진 주워 모으던 그 집요함, 우리가 다 지켜봤네."
+    text: "So, you’re Cat Joe, aren’t you? We’ve seen that spark in you — the one that drove you to collect space photos from old library scraps every night."
   },
   {
     id: "S2",
-    name: "직원 2",
+    name: "Agent 2",
     side: "right",
     avatar: "/agent.png",
-    text: "우린 Hidden Stars Program이야. NASA는 배경 대신 가능성을 본다. 자네의 모든 걸 훈련으로 빛나게 할 기회지 지구도, 자네 미래도 바뀔 거야."
+    text: "We’re from the Hidden Stars Program. NASA sees potential in you. Everything you are could shape the next generation of astronauts. This is your chance — to change space, Earth, and your own future."
   },
   {
     id: "CJ",
     name: "Cat Joe",
     side: "left",
     avatar: "/homeless.png",
-    text: "별은… 늘 남 얘기인 줄 알았는데요."
+    text: "Stars... I never thought they had anything to do with me."
   },
   {
     id: "S1",
-    name: "직원 1",
+    name: "Agent 1",
     side: "right",
     avatar: "/agent.png",
-    text: "선택은 자네 몫이야. 우리와 가장 깊은 물속에서 버티고, 가장 높은 곳에서 지구를 내려다볼 텐가?"
+    text: "The choice is yours. Will you train with us — in the deepest waters, and see Earth from the highest skies?"
   },
   {
     id: "CJ",
     name: "Cat Joe",
     side: "left",
     avatar: "/homeless.png",
-    text: "할게요. 숨만 쉬던 삶에서, 진짜로 살아보겠습니다."
+    text: "Yes, sir. I’ll do it. It’s time to start my second life."
   }
 ];
 
