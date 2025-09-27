@@ -14,7 +14,7 @@ function Type({ text, startDelay = 0, speed = 70, className, onDone }) {
             clearInterval(intervalId);
             if (!doneRef.current) {
               doneRef.current = true;
-              onDone?.(); 
+              onDone?.();
             }
             return c;
           }
@@ -32,7 +32,7 @@ function Type({ text, startDelay = 0, speed = 70, className, onDone }) {
   return <span className={className}>{text.slice(0, count)}</span>;
 }
 
-export default function Splash({ onStart }) {
+export default function Splash({ onStart, onCupola }) {
   const [finishedCount, setFinishedCount] = useState(0);
   const allDone = finishedCount >= 4;
 
@@ -40,6 +40,11 @@ export default function Splash({ onStart }) {
 
   return (
     <div className="screen screen--splash">
+      {/* 상단 고정 버튼 */}
+      <button className="cupola-btn" onClick={onCupola}>
+        CUPOLA
+      </button>
+
       <img src="/logo.png" alt="logo" className="logo" />
 
       <button

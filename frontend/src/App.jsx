@@ -3,18 +3,23 @@ import Splash from "./components/Splash.jsx";
 import AlleyScene from "./components/AlleyScene.jsx";
 import AlleyCharacters from "./components/AlleyCharacters.jsx";
 import DialogScene from "./components/DialogScene.jsx";
+import CupolaScene from "./components/CupolaScene.jsx"; // ✅
 
 export default function App() {
   const [scene, setScene] = useState("splash");
 
   return (
     <div className="app-root">
-      {scene === "splash" && <Splash onStart={() => setScene("alley")} />}
-      {scene === "alley" && <AlleyScene onNext={() => setScene("alley-characters")} />}
-      {scene === "alley-characters" && (
-        <AlleyCharacters onNext={() => setScene("dialog")} />
+      {scene === "splash" && (
+        <Splash
+          onStart={() => setScene("alley")}
+          onCupola={() => setScene("cupola")}   // ✅ 꼭 넘겨줘야 함
+        />
       )}
-      {scene === "dialog" && <DialogScene onEnd={() => console.log("끝!")} />}
+      {scene === "alley" && <AlleyScene onNext={() => setScene("alley-characters")} />}
+      {scene === "alley-characters" && <AlleyCharacters onNext={() => setScene("dialog")} />}
+      {scene === "dialog" && <DialogScene onEnd={() => setScene("cupola")} />}
+      {scene === "cupola" && <CupolaScene />} 
     </div>
   );
 }
