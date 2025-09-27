@@ -13,11 +13,11 @@ import {
 import * as THREE from "three";
 import { SkeletonUtils } from "three-stdlib";
 
-const EARTH_TARGET_DIAMETER = 90.0;         
+const EARTH_TARGET_DIAMETER = 800.0;         
 const EARTH_SPIN_SPEED = 0.12;              
-const EARTH_ABS_POS = new THREE.Vector3(0, 70, 0); 
+const EARTH_ABS_POS = new THREE.Vector3(0, 500, 0); 
 
-const EARTH_TILT_DEG = 45;
+const EARTH_TILT_DEG = -45;
 const EARTH_TILT_AXIS = "z"; 
 
 const CUPOLA_ROT_YAW_DEG = 90;
