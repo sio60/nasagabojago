@@ -3,7 +3,7 @@ import Splash from "./components/Splash.jsx";
 import AlleyScene from "./components/AlleyScene.jsx";
 import AlleyCharacters from "./components/AlleyCharacters.jsx";
 import DialogScene from "./components/DialogScene.jsx";
-import CupolaScene from "./components/CupolaScene.jsx"; // ✅
+import CupolaScene from "./components/CupolaScene.jsx"; 
 
 export default function App() {
   const [scene, setScene] = useState("splash");
@@ -13,7 +13,7 @@ export default function App() {
       {scene === "splash" && (
         <Splash
           onStart={() => setScene("alley")}
-          onCupola={() => setScene("cupola")}   // ✅ 꼭 넘겨줘야 함
+          onCupola={() => setScene("cupola")} 
         />
       )}
       {scene === "alley" && <AlleyScene onNext={() => setScene("alley-characters")} />}
