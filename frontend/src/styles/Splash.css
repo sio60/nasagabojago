@@ -1,0 +1,93 @@
+.screen--splash {
+  width: 100vw;
+  height: 100vh;
+  background: url("/iss.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 120px;
+}
+
+.pixel-btn {
+  border: none;
+  border-radius: 16px;
+  background: #95b4ea;
+  color: #0b1a3a;
+  font-weight: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.pixel-btn:hover { 
+  background: #5f92f0; 
+  transform: translate(-50%, 0) scale(1.05); 
+}
+
+@keyframes btnFadeUp {
+  from { opacity: 0; transform: translate(-50%, 16px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.pixel-btn--big {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%, 16px);
+  padding: 70px 170px;
+  font-size: 70px;
+  border-radius: 24px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pixel-btn--big.is-visible {
+  animation: btnFadeUp 900ms ease-out 150ms forwards;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-btn--big { animation: none; opacity: 0; transform: translate(-50%, 0); }
+  .pixel-btn--big.is-visible { opacity: 1; }
+}
+
+.stair-text {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 900;
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,.7);
+  user-select: none;
+  line-height: 1.3;
+}
+
+.stair-text div {
+  font-size: 5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.15em;
+}
+
+.big { 
+  font-size: 7rem; 
+  font-weight: 900; 
+  letter-spacing: 0.5px; 
+  line-height: 1; 
+}
+
+.type { 
+  display: inline-block; 
+  transform: translateY(5px); 
+}
+
+.logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 350px; 
+  height: auto;
+}
